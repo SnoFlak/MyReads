@@ -25,6 +25,8 @@ const Search = ({books, storeBook}) => {
                 })
                 setSearchResults(resultsArray);
             }
+        } else {
+            setSearchResults([]);
         }
     }
 
@@ -53,7 +55,7 @@ const Search = ({books, storeBook}) => {
                             :
                             (searchValue.length > 0 ? 
                                 <p>Searching...</p> 
-                                : <p></p>
+                                : <p>Search for a book above</p>
                             )
                         )
                     }
