@@ -46,7 +46,7 @@ const Search = ({books, storeBook}) => {
             <div className="search-books-results">
                 <ol className="books-grid">
                     {
-                        (searchResults.length > 0 ? 
+                        ((searchResults.length > 0) && searchValue.length > 0 ? 
                             searchResults.map((bookData) => {
                                 return(
                                     <Book key={bookData.id} bookData={bookData} storeBook={storeBook}/>
